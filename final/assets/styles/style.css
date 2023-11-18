@@ -1,0 +1,266 @@
+html, body{
+    margin: 0px;
+    width:100%;
+    padding:0px;
+    overflow-x: hidden;
+    height:100%; 
+}
+
+
+
+
+/* Home Button */
+
+#home_button {
+    display: block;
+    margin-left: 48.5%;
+    margin-top: 30px;
+
+}
+
+#home_button img {
+    width: 70px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transition: 0.2s all ease-in-out; 
+}
+
+#home_button img:hover{
+    transform: scale(1.08);
+    cursor: pointer;
+}
+
+/* Content */
+
+.container {
+    width: 1024px;
+    height: 700px;
+
+    position: relative;
+    margin: auto;
+    top: 0; 
+   
+
+}
+
+
+#hats_button img{
+    width: 280px;
+    height: auto;
+
+    position: absolute;
+    right: 20%;
+    top: 30%;
+    transition: 0.2s all ease-in-out;
+}
+
+#coasters_button img{
+    width: 160px;
+    height: auto;
+    position: absolute;
+    right: 0;
+    top: 3%;
+    transition: 0.2s all ease-in-out;
+}
+
+#others_button_1 img{ /* Cake */
+    width: 150px;
+    height: auto;
+    position: absolute;
+    right: 10%;
+    top: 78%;
+    transition: 0.2s all ease-in-out;
+}
+
+#others_button_2 img{ /* Taco */
+    width: 120px;
+    height: auto;
+    position: absolute;
+    left: 0;
+    top: 63%;
+    transition: 0.2s all ease-in-out;
+}
+
+#miffy_button img{
+    height: 250px;
+    width: auto;
+    position: absolute;
+    left: 27%;
+    top: 60%;
+    transition: 0.2s all ease-in-out;
+}
+
+#bags_button img{
+    width: 220px;
+    height: auto;
+    position: absolute;
+    left: 8%;
+    top: 5%;
+    transition: 0.2s all ease-in-out;
+    
+}
+
+
+.button img:hover{
+    transform: scale(1.08);
+    cursor: pointer;
+}
+
+.button{
+    opacity:0;
+    animation: load_in 1s ease-in forwards;
+    animation-delay: 1.5s;
+    height: max-content;
+}
+
+.title{
+    font-family: 'Caveat';
+    font-size: 36px;
+    letter-spacing:2px;
+}
+
+#title_group{
+    position: relative;
+    left: 30%;
+    top: 18%;
+
+}
+
+#line1 {
+    position: absolute;
+    opacity:0;
+    left:0;
+    top:0;
+    animation: load_in 1s ease-in forwards;
+}
+
+
+#line2 {
+    position: absolute;
+    opacity:0;
+    left:50px;
+    top:45;
+    animation: load_in 1s ease-in forwards;
+    animation-delay: 0.5s;
+}
+
+
+#line3 {
+    position: absolute;
+    opacity:0;
+    left: 120px;
+    top: 90px;
+    animation: load_in 1s ease-in forwards;
+    animation-delay: 1s;
+
+}
+
+
+#description p{
+    opacity:0;
+    font-family: Lato; 
+    letter-spacing: 3px;
+    position:absolute;
+    bottom:18px;
+    right:28%;
+    
+    animation: load_in 1s ease-in forwards, bounce 2s infinite;
+    animation-delay: 3s;
+
+}
+
+
+@keyframes load_in {
+    from {opacity:0; }
+    to {opacity:100%; }
+}
+
+@keyframes bounce{
+    0%, 20%, 40%, 70%, 100% {transform: translateY(0);}
+    30% {transform: translateY(-15px);}
+    50% {transform: translateY(-8px);}
+}
+
+
+/* Carousel pages */
+
+#carousel_container{
+    max-width: 800px;
+    height: 600px;
+    margin: 0 auto;
+    position:relative;
+
+    overflow: hidden;
+}
+.carousel {
+    display: flex;
+    width:100%;
+    height:100%;
+
+    transition: transform 0.5s ease-in-out
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+
+    flex: 1 0 100%;
+
+    display:flex;
+    justify-content: center;
+
+}
+
+
+.slide img {
+    height:100%;
+    width:auto;
+}
+
+#switch_buttons{
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    animation-delay: 0s;
+
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+}
+#prev {
+    width:20px;
+    height:auto;
+    margin-left:50px;
+
+    transform: rotate(180deg);
+}
+
+#next {
+    width:20px;
+    height:auto;
+    margin-right:50px;
+
+}
+
+#category_name {
+    margin:auto;
+}
+
+#container1 {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* to account for the image size of the coasters */
+
+.slide.smaller img{
+    transform:scale(0.7);
+}
+
+
